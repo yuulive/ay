@@ -11,12 +11,12 @@ use syn::{
 type Generics<'a> = (ImplGenerics<'a>, TypeGenerics<'a>, Option<&'a WhereClause>);
 
 #[proc_macro_attribute]
-pub fn functionate(_args: TokenStream, item: TokenStream) -> TokenStream {
+pub fn ay(_args: TokenStream, item: TokenStream) -> TokenStream {
 	let item = parse_macro_input!(item as ItemImpl);
-	TokenStream::from(functionate_impl(item))
+	TokenStream::from(ay_impl(item))
 }
 
-fn functionate_impl(item: ItemImpl) -> TokenStream2 {
+fn ay_impl(item: ItemImpl) -> TokenStream2 {
 	let ItemImpl {
 		generics,
 		trait_: tr,
@@ -77,7 +77,7 @@ fn method_to_impl(ty: &Ident, generics: &Generics, method: &ImplItemMethod) -> T
 		..
 	} = &method.sig;
 	let block = &method.block;
-	let tr_ident = format_ident!("_{}Functionate_{}", ty, ident);
+	let tr_ident = format_ident!("_{}ay_{}", ty, ident);
 
 	let output = match output {
 		ReturnType::Default => quote! { () },

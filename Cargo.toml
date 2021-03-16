@@ -1,12 +1,12 @@
 [package]
-name = "functionate"
+name = "ay"
 version = "0.1.0"
 authors = ["Nikodem Rabuliński <nikodemrabulinski@gmail.com>"]
 edition = "2018"
 license = "MIT"
-description = "Automatically implement Fn* traits for structs and enums"
+description = "Ay automatically implement Fn* traits for structs and enums"
 keywords = ["macro", "unstable", "function", "metaprogramming", "meta"]
-repository = "https://github.com/nrabulinski/functionate/"
+repository = "https://github.com/yuulive/ay/"
 readme = "README.md"
 categories = ["rust-patterns"]
 
